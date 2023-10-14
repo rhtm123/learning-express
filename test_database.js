@@ -26,6 +26,8 @@ connectToMongoDB();
 // insert a data 
 
 async function insertuser(user) {
+    // client.db() -> default db 
+    // client.db('your_database_name') -> 
     let usersCollection = client.db("new_db").collection('users');
 
      const result = await usersCollection.insertOne(user);
