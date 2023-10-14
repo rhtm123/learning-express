@@ -1,0 +1,30 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Express Templating Tutorial</title>
+</head>
+<body>
+ 
+  <h1>Latest Blogs</h1>
+  <p><%= message %></p>
+  <% if (isloggedIn) {%> 
+        <h2> You can access this page</h2>
+    <%} else {%> 
+        <h2> You can access this page but I advice you to login.</h2>
+        <%}
+  %>
+
+
+
+
+
+    <% for (let i = 0; i < blogs.length; i++) {%>
+        <div>
+            <h2><%= i+1 %>  <%= blogs[i].header  %></h2>
+        </div>
+    <%} 
+   %>
+
+</body>
+</html>
